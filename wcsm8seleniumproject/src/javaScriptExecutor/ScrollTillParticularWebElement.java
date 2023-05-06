@@ -19,6 +19,7 @@ public class ScrollTillParticularWebElement {
 
 		ChromeOptions co = new ChromeOptions();
 		co.addArguments("--disable-notifications");
+		
 		WebDriver driver=new ChromeDriver(co);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
