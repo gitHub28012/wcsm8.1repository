@@ -1,6 +1,7 @@
-package actionsClass;
+package windowBasedPopup;
 
 import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
@@ -9,9 +10,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-public class DoubleClickMethod {
-
-	public static void main(String[] args) throws InterruptedException {
+public class FileUploadPopup {
+	public static void main(String[] args) throws InterruptedException, IOException {
 		System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
 
 		//	Open Browser
@@ -44,16 +44,24 @@ public class DoubleClickMethod {
 
 		// create obj of Actions Class
 		Actions act = new Actions(driver);
-		
+
 		//  Use this method for DoubleClick....
 		act.doubleClick(target).perform();
-		Thread.sleep(2000);
+	//	Thread.sleep(2000);
 
-		
-		
-		
+		// To Handle FileUplaod Pop up ....
+
+		File file = new File("./autoit/Fileup.exe");
+		String absolutePath = file.getAbsolutePath();
+		Thread.sleep(2000);
+		Runtime.getRuntime().exec(absolutePath);
+		Thread.sleep(2000);
+		Runtime.getRuntime().exec(absolutePath);
+
+
+
 		// close the browser
-		driver.quit();
+		//	driver.quit();
 
 
 
