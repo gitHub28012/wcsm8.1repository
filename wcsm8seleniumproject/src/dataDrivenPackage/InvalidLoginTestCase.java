@@ -20,9 +20,12 @@ public class InvalidLoginTestCase extends Flib {
 		// to read the data from external files create the obj of flib 
 		
 		Flib flib = new Flib();
+		
 		int rc = flib.rowCount("./data/ActiTimeTestData.xlsx","invalidcreds");
+		
 		for(int i=1;i<=rc;i++)
 		{
+			
 		String invalidUsername = flib.readExcelData("./data/ActiTimeTestData.xlsx","invalidcreds",i,0);
 	    String invalidPassword = flib.readExcelData("./data/ActiTimeTestData.xlsx","invalidcreds",i, 1);
 	
