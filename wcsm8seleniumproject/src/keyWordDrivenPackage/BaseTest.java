@@ -8,35 +8,35 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class BaseTest extends Flib {
+public class BaseTest extends Flib implements IAutoConstant{
 
 	static WebDriver driver;
 
 	public void openBrowser() throws IOException
 	{
 		Flib flib = new Flib();
-		String browserValue = flib.readPropertyData("./data/config.properties","browser");
-		String url = flib.readPropertyData("./data/config.properties","url");
+		String browserValue = flib.readPropertyData(PROP_PATH,"browser");
+		String url = flib.readPropertyData(PROP_PATH,"url");
 
-		if(browserValue.equalsIgnoreCase("chrome"))
+		if(browserValue.equals("chrome"))
 		{
-			System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
+			System.setProperty(CHROME_KEY,CHROME_PATH);
 			driver=new ChromeDriver();
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.get(url);
 		}
-		else if(browserValue.equalsIgnoreCase("Firefox"))
+		else if(browserValue.equals("Firefox"))
 		{
-			System.setProperty("webdriver.gecko.driver","./drivers/geckodriver.exe");
+			System.setProperty(GECKO_KEY,GECKO_PATH);
 			driver=new FirefoxDriver();
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.get(url);
 		}
-		else if(browserValue.equalsIgnoreCase("edge"))
+		else if(browserValue.equals("Edge"))
 		{
-			System.setProperty("webdriver.edge.driver","./drivers/msedgedriver.exe");
+			System.setProperty(EDGE_KEY,EDGE_PATH);
 			driver=new EdgeDriver();
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
@@ -44,8 +44,9 @@ public class BaseTest extends Flib {
 		}
 		else
 		{
-			System.out.println("Invalid Browser Value!!!");
+			System.out.println("Invalid BrowserValue!!!");
 		}
+
 	}
 
 	public void closeBrowser()

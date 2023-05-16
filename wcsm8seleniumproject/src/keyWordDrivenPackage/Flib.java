@@ -52,15 +52,16 @@ public class Flib {
 		FileOutputStream fos = new FileOutputStream(excelPath);
 		wb.write(fos);
 	}
-	
+
 	public String readPropertyData(String propPath,String key) throws IOException
 	{
 		FileInputStream fis = new FileInputStream(propPath);
-		
+
 		Properties prop = new Properties();
-        prop.load(fis);	
-        String data = prop.getProperty(key);
-        return data;
+		prop.load(fis);
+		String data = prop.getProperty(key);
+		return data;
+		
 	}
 
 

@@ -4,23 +4,28 @@ import java.io.IOException;
 
 import org.openqa.selenium.By;
 
-public class ValidLoginTestCase extends BaseTest{
+public class ValidLoginTestCase extends BaseTest {
 	
 	public static void main(String[] args) throws IOException, InterruptedException {
 		
+		// To open the browser Create the obj of BaseTest
 		BaseTest bt = new BaseTest();
-		bt.openBrowser();
 		
+		// read the data from property file
 		Flib flib = new Flib();
 		
-		driver.findElement(By.name("username")).sendKeys(flib.readPropertyData("./data/config.properties","username"));
+		bt.openBrowser();
+		
+		driver.findElement(By.name("username")).sendKeys(flib.readPropertyData(PROP_PATH,"username"));
 		Thread.sleep(2000);
-		driver.findElement(By.name("pwd")).sendKeys(flib.readPropertyData("./data/config.properties","password"));
-		Thread.sleep(2000);
-		driver.findElement(By.id("loginButton")).click();
-		Thread.sleep(2000);
-		bt.closeBrowser();
+		driver.findElement(By.name("pwd")).sendKeys(flib.readPropertyData(PROP_PATH,"password"));
+	    driver.findElement(By.id("loginButton")).click();
+	    Thread.sleep(2000);
+	    bt.closeBrowser();
+		
 		
 	}
+	
+	
 
 }
