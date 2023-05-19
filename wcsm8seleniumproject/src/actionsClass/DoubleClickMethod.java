@@ -30,7 +30,7 @@ public class DoubleClickMethod {
 
 		// click on Setting 
 
-		driver.findElement(By.xpath("//div[text()='Settings']/following-sibling::img")).click();
+		driver.findElement(By.xpath("//A[@class='content administration']/IMG[@class='sizer']")).click();
 
 		//click on logo & color
 		driver.findElement(By.xpath("//a[contains(.,'Logo &')]")).click();
