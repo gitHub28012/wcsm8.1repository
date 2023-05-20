@@ -66,6 +66,20 @@ public class Flib {
 		return data;
 	}
 	
+	// generalize Cell Count
+	
+	
+	public short cellCount(String excelPath,String sheetName,int rowCount) throws EncryptedDocumentException, IOException
+	{
+		FileInputStream fis = new FileInputStream(excelPath);
+		Workbook wb = WorkbookFactory.create(fis);
+		Sheet sheet = wb.getSheet(sheetName);
+		Row row = sheet.getRow(rowCount);
+		short cc = row.getLastCellNum();
+		return cc;
+	}
+	
+	
 	
 	
 	
