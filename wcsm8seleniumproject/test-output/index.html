@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\Qspiders Wakad\git\wcsm8.1repository\wcsm8seleniumproject\testngSuite4.xml</span>
+                    <span>C:\Users\Qspiders Wakad\git\wcsm8.1repository\wcsm8seleniumproject\testngTestMethodParallelExecution.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,17 +104,12 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testNGAnnotations.GoogleSearchTestCase" class="method navigator-link" hash-for-method="search1">search1</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="testNGPack2.MethodExecution" class="method navigator-link" hash-for-method="method1">method1</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testNGAnnotations.GoogleSearchTestCase" class="method navigator-link" hash-for-method="search2">search2</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testNGAnnotations.GoogleSearchTestCase" class="method navigator-link" hash-for-method="serach3">serach3</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="testNGPack2.MethodExecution" class="method navigator-link" hash-for-method="method2">method2</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -132,28 +127,21 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">testNGAnnotations.GoogleSearchTestCase</span>
+              <span class="class-name">testNGPack2.MethodExecution</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="search1">
-                  </a> <!-- search1 -->
-                  <span class="method-name">search1</span>
+                  <a name="method1">
+                  </a> <!-- method1 -->
+                  <span class="method-name">method1</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="search2">
-                  </a> <!-- search2 -->
-                  <span class="method-name">search2</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="serach3">
-                  </a> <!-- serach3 -->
-                  <span class="method-name">serach3</span>
+                  <a name="method2">
+                  </a> <!-- method2 -->
+                  <span class="method-name">method2</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -161,16 +149,16 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Qspiders Wakad\git\wcsm8.1repository\wcsm8seleniumproject\testngSuite4.xml</span>
+            <span class="header-content">C:\Users\Qspiders Wakad\git\wcsm8.1repository\wcsm8seleniumproject\testngTestMethodParallelExecution.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
+&lt;suite parallel=&quot;methods&quot; name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;methods&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testNGAnnotations.GoogleSearchTestCase&quot;/&gt;
+      &lt;class name=&quot;testNGPack2.MethodExecution&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -210,24 +198,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'serach3')
-data.setCell(0, 2, 'testNGAnnotations.GoogleSearchTestCase')
-data.setCell(0, 3, 264);
+data.setCell(0, 1, 'method1')
+data.setCell(0, 2, 'testNGPack2.MethodExecution')
+data.setCell(0, 3, 10);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'search2')
-data.setCell(1, 2, 'testNGAnnotations.GoogleSearchTestCase')
-data.setCell(1, 3, 256);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'search1')
-data.setCell(2, 2, 'testNGAnnotations.GoogleSearchTestCase')
-data.setCell(2, 3, 241);
+data.setCell(1, 1, 'method2')
+data.setCell(1, 2, 'testNGPack2.MethodExecution')
+data.setCell(1, 3, 10);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 761 ms</span>
+              <span class="suite-total-time">Total running time: 20 ms</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -238,6 +222,20 @@ return data;
             <span class="header-content">Reporter output for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">method1</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">18 : is the thread id of Method</span>
+                <span class="reporter-method-output">method 1</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">method2</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">19 : is the thread id of Method</span>
+                <span class="reporter-method-output">method 2</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
@@ -253,47 +251,15 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testNGAnnotations.GoogleSearchTestCase</div> <!-- chronological-class-name -->
-              <div class="configuration-test before">
-                <span class="method-name">propertyMethod</span>
+              <div class="chronological-class-name">testNGPack2.MethodExecution</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">method1</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-test before -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp</span>
-                <span class="method-start">38 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">search1</span>
-                <span class="method-start">3010 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">3254 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp</span>
-                <span class="method-start">5444 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">search2</span>
-                <span class="method-start">7668 ms</span>
+                <span class="method-name">method2</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">7926 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp</span>
-                <span class="method-start">10113 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">serach3</span>
-                <span class="method-start">12399 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">12665 ms</span>
-              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

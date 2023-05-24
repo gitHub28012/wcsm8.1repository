@@ -3,11 +3,11 @@
 <suite name="Failed suite [Failed suite [Suite]]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)(failed)">
     <classes>
-      <class name="testNGPack2.DemoTest2">
+      <class name="testNGPack2.Test3">
         <methods>
-          <include name="f1"/>
+          <include name="test3Method"/>
         </methods>
-      </class> <!-- testNGPack2.DemoTest2 -->
+      </class> <!-- testNGPack2.Test3 -->
     </classes>
   </test> <!-- Test(failed)(failed) -->
 </suite> <!-- Failed suite [Failed suite [Suite]] -->
