@@ -32,21 +32,22 @@ public class BaseTest {
 		driver.get("http://laptop-knl22f4g/login.do");
 	}
 	
-	public void failedMethod(String failedMethod)
-	{
-		try
-		{
-		TakesScreenshot ts = (TakesScreenshot)driver;
-		File src = ts.getScreenshotAs(OutputType.FILE);
-		File dest = new File("./ScreenShots/"+failedMethod+".png");
-		Files.copy(src, dest);
-		}
-		
-		catch(Exception e)
-		{
-			
-		}
-	}
+	// Create The generic reusable Method to take ScreenShot
+	
+	  public void failedMethodToTakesScreenShot(String failedMethod)
+	  {
+		  try {
+		  TakesScreenshot ts = (TakesScreenshot)driver;
+		  File src = ts.getScreenshotAs(OutputType.FILE);
+		  File dest = new File("./ScreenShots/"+failedMethod+".png");
+		  Files.copy(src, dest);
+		  }
+		  
+		  catch(Exception e)
+		  {
+			  
+		  }
+	  }
 	
 	@AfterMethod
 	public void tearDown() throws InterruptedException

@@ -1,33 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
-    <line>
-      <![CDATA[login :This the failed Method of Test Case]]>
-    </line>
   </reporter-output>
-  <suite started-at="2023-05-27T10:40:42 IST" name="Default suite" finished-at="2023-05-27T10:40:47 IST" duration-ms="4593">
+  <suite started-at="2023-05-29T10:46:42 IST" name="Default suite" finished-at="2023-05-29T10:46:45 IST" duration-ms="3087">
     <groups>
     </groups>
-    <test started-at="2023-05-27T10:40:42 IST" name="Default test" finished-at="2023-05-27T10:40:47 IST" duration-ms="4593">
-      <class name="dynamicScreenShot.TestCase">
-        <test-method is-config="true" signature="property()[pri:0, instance:dynamicScreenShot.TestCase@7ea9e1e2]" started-at="2023-05-27T10:40:42 IST" name="property" finished-at="2023-05-27T10:40:42 IST" duration-ms="12" status="PASS">
+    <test started-at="2023-05-29T10:46:42 IST" name="Default test" finished-at="2023-05-29T10:46:45 IST" duration-ms="3087">
+      <class name="dynamicScreenShot.AssertionInTestNG">
+        <test-method is-config="true" signature="property()[pri:0, instance:dynamicScreenShot.AssertionInTestNG@4de4b452]" started-at="2023-05-29T10:46:42 IST" name="property" finished-at="2023-05-29T10:46:42 IST" duration-ms="11" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- property -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:dynamicScreenShot.TestCase@7ea9e1e2]" started-at="2023-05-27T10:40:42 IST" name="setUp" finished-at="2023-05-27T10:40:44 IST" duration-ms="1943" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:dynamicScreenShot.AssertionInTestNG@4de4b452]" started-at="2023-05-29T10:46:42 IST" name="setUp" finished-at="2023-05-29T10:46:44 IST" duration-ms="1994" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="login()[pri:0, instance:dynamicScreenShot.TestCase@7ea9e1e2]" started-at="2023-05-27T10:40:44 IST" name="login" finished-at="2023-05-27T10:40:45 IST" duration-ms="168" status="FAIL">
+        <test-method signature="login()[pri:0, instance:dynamicScreenShot.AssertionInTestNG@4de4b452]" started-at="2023-05-29T10:46:44 IST" name="login" finished-at="2023-05-29T10:46:45 IST" duration-ms="798" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[null]]>
+              <![CDATA[The following asserts failed:
+expected [idontknow] but found [actiTIME - Login]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: null
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.fail(Assert.java:106)
-at dynamicScreenShot.TestCase.login(TestCase.java:17)
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+expected [idontknow] but found [actiTIME - Login]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+at dynamicScreenShot.AssertionInTestNG.login(AssertionInTestNG.java:70)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -60,16 +59,13 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
-            <line>
-              <![CDATA[login :This the failed Method of Test Case]]>
-            </line>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:dynamicScreenShot.TestCase@7ea9e1e2]" started-at="2023-05-27T10:40:45 IST" name="tearDown" finished-at="2023-05-27T10:40:47 IST" duration-ms="2223" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:dynamicScreenShot.AssertionInTestNG@4de4b452]" started-at="2023-05-29T10:46:45 IST" name="tearDown" finished-at="2023-05-29T10:46:45 IST" duration-ms="229" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- dynamicScreenShot.TestCase -->
+      </class> <!-- dynamicScreenShot.AssertionInTestNG -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
