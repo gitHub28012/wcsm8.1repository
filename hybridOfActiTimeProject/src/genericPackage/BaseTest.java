@@ -18,7 +18,7 @@ import com.google.common.io.Files;
 
 public class BaseTest extends Flib implements IAutoconstant {
 	
-	static WebDriver driver;
+	protected static WebDriver driver;
 	
 	// It is use to open the browser & close the browser
 	@BeforeMethod
