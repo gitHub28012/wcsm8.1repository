@@ -14,7 +14,7 @@ import pagePackage.TaskListPage;
 import pagePackage.UserListPage;
 @Listeners(CustomeListners.class)
 public class ValidLoginTestCase extends BaseTest {
-	
+
 	@Test
 	public void validTestCase() throws IOException, InterruptedException
 	{
@@ -23,7 +23,7 @@ public class ValidLoginTestCase extends BaseTest {
 		Flib flib = new Flib();
 		LoginPage lp = new LoginPage(driver);
 		lp.validLogin(flib.readPropertyData(PROP_PATH,"username"),flib.readPropertyData(PROP_PATH,"password"));
-        Thread.sleep(2000);		
+        Thread.sleep(2000);
         HomePage hp = new HomePage(driver);
         hp.usersModuleMethod();
         Thread.sleep(2000);
@@ -37,7 +37,7 @@ public class ValidLoginTestCase extends BaseTest {
 		task.createNewCustomerMethod(flib.readExcelData(EXCEL_PATH,"customer&projectList",1,0));
 		Thread.sleep(2000);
 		task.createProjectMethod(0,flib.readExcelData(EXCEL_PATH,"customer&projectList",1,1));
-		
+
 	}
 
 }

@@ -1,7 +1,6 @@
 package genericPackage;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Properties;
@@ -14,14 +13,14 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 
 public class Flib {
-	
+
 	// It is use to Store generic reusable methods
-	
-	
+
+
 	// read Excel Data
 	public String readExcelData(String excelPath,String sheetName,int rowCount,int cellCount) throws EncryptedDocumentException, IOException
 	{
-         FileInputStream fis = new FileInputStream(excelPath);	
+         FileInputStream fis = new FileInputStream(excelPath);
          Workbook wb = WorkbookFactory.create(fis);
          Sheet sheet = wb.getSheet(sheetName);
          Row row = sheet.getRow(rowCount);
@@ -29,9 +28,9 @@ public class Flib {
          String data = cell.getStringCellValue();
          return data;
 	}
-	
+
 	// read property Data
-	
+
 		public String readPropertyData(String propPath,String key) throws IOException
 		{
 			FileInputStream fis = new FileInputStream(propPath);
@@ -40,20 +39,20 @@ public class Flib {
 			String data = prop.getProperty(key);
 			return data;
 		}
-		
+
 	// genralize the rowCount
-	
+
 	public int rowCount(String excelPath,String sheetName) throws EncryptedDocumentException, IOException
 	{
 		FileInputStream fis = new FileInputStream(excelPath);
 		Workbook wb = WorkbookFactory.create(fis);
 		Sheet sheet = wb.getSheet(sheetName);
 		int rc = sheet.getLastRowNum();
-		return rc;	
+		return rc;
 	}
-	
+
 	//write Excel data
-	
+
 	public void writeExcelData(String excelPath,String sheetName,int rowCount,int cellCount,String data) throws EncryptedDocumentException, IOException
 	{
 
@@ -63,12 +62,12 @@ public class Flib {
 		Row row = sheet.getRow(rowCount);
 		Cell cell = row.createCell(cellCount);
 		cell.setCellValue(data);
-		
+
 		FileOutputStream fos = new FileOutputStream(excelPath);
 		wb.write(fos);
 	}
-	
-	
-	
-	
+
+
+
+
 }

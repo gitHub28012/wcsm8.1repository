@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-06-03T11:00:03 IST" name="Suite" finished-at="2023-06-03T11:00:06 IST" duration-ms="2918">
+    <groups>
+    </groups>
+    <test started-at="2023-06-03T11:00:03 IST" name="Test" finished-at="2023-06-03T11:00:06 IST" duration-ms="2918">
+      <class name="testPackage.ValidLoginTestCase">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testPackage.ValidLoginTestCase@4f2b503c]" started-at="2023-06-03T11:00:03 IST" name="setUp" finished-at="2023-06-03T11:00:06 IST" duration-ms="2446" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="validLoginMethod()[pri:0, instance:testPackage.ValidLoginTestCase@4f2b503c]" started-at="2023-06-03T11:00:06 IST" name="validLoginMethod" finished-at="2023-06-03T11:00:06 IST" duration-ms="238" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLoginMethod -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testPackage.ValidLoginTestCase@4f2b503c]" started-at="2023-06-03T11:00:06 IST" name="tearDown" finished-at="2023-06-03T11:00:06 IST" duration-ms="192" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testPackage.ValidLoginTestCase -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

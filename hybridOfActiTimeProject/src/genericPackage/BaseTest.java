@@ -17,18 +17,18 @@ import org.testng.annotations.BeforeMethod;
 import com.google.common.io.Files;
 
 public class BaseTest extends Flib implements IAutoconstant {
-	
+
 	protected static WebDriver driver;
-	
+
 	// It is use to open the browser & close the browser
 	@BeforeMethod
 	public void setUp() throws IOException
 	{
 		Flib flib = new Flib();
-		
+
 		String browserValue = flib.readPropertyData(PROP_PATH,"browser");
 		String url = flib.readPropertyData(PROP_PATH,"url");
-		
+
 		if(browserValue.equalsIgnoreCase("chrome"))
 		{
 			System.setProperty(CHROME_KEY, CHROME_PATH);
@@ -53,7 +53,7 @@ public class BaseTest extends Flib implements IAutoconstant {
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.get(url);
 		}
-		else 
+		else
 		{
 			Reporter.log("InvalidBrowser Value!!!",true);
 		}
@@ -70,15 +70,15 @@ public class BaseTest extends Flib implements IAutoconstant {
 		}
 		catch(Exception e)
 		{
-			
+
 		}
 	}
-	
+
 	@AfterMethod
 	public void tearDown()
 	{
 		driver.quit();
 	}
-	
-	
+
+
 }

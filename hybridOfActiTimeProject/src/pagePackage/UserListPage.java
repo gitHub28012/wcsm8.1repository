@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import genericPackage.Worklib;
 
 public class UserListPage {
-	
+
 	@FindBy(xpath = "//input[@value='Create New User']") private WebElement CreateNewUserButton;
 	@FindBy(xpath = "//*[@name='username']") private WebElement userNameTB;
 	@FindBy(xpath = "//*[@name='passwordText']") private WebElement passwordTB;
@@ -24,14 +24,14 @@ public class UserListPage {
 	@FindBy(xpath = "//*[@id='right1']") private WebElement manageReport;
 	@FindBy(xpath = "//*[@id='right5']") private WebElement manageUsers;
 	@FindBy(xpath = "//*[@id='right7']") private WebElement manageBilling;
- 
-    
+
+
     //intialization
     public UserListPage(WebDriver driver)
     {
     	PageFactory.initElements(driver,this);
     }
-    
+
     //utilaization
     public WebElement getCreateNewUserButton() {
 		return CreateNewUserButton;
@@ -83,14 +83,14 @@ public class UserListPage {
 		return manageBilling;
 	}
 
-	
-	
-	
-	
+
+
+
+
 	// Operational Methods.
-	
-	
-	
+
+
+
 	public void createUserMethod(String usn,String pass,String Fn,String Ln) throws InterruptedException
 	{
 		CreateNewUserButton.click();
@@ -99,16 +99,16 @@ public class UserListPage {
 		Thread.sleep(1000);
 		passwordTB.sendKeys(pass);
 		passwordTextRetypeTB.sendKeys(pass);
-		
+
 		Thread.sleep(1000);
 		FiRSTNameTB.sendKeys(Fn);
 		Thread.sleep(1000);
 		LastNameTB.sendKeys(Ln);
-		
+
 		Thread.sleep(1000);
-	
+
 	}
-	
+
 	 public void deleteUserMethod() throws InterruptedException
 	 {
 		 userCreatedLink.click();
@@ -126,7 +126,7 @@ public class UserListPage {
 		 manageUsers.click();
 		 manageBilling.click();
 	 }
-	
+
 	 public void managerCreateMethod()
 	 {
 			CreateUserButton.click();
